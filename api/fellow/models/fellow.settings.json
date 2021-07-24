@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fellows",
+  "info": {
+    "name": "fellow",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "discipline": {
+      "type": "enumeration",
+      "enum": [
+        "BAES",
+        "CS",
+        "ES",
+        "ITCS",
+        "MHS",
+        "MPES",
+        "STDI",
+        "SSH"
+      ],
+      "required": true
+    },
+    "area_of_expertise": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "secondary_email": {
+      "type": "email",
+      "unique": true
+    },
+    "official_address": {
+      "type": "text"
+    },
+    "date_of_election": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "mobile_number": {
+      "type": "biginteger"
+    },
+    "biography": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
