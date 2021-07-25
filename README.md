@@ -2,4 +2,5 @@
 
 To start the app in dev mode
 
-npm run develop
+### `npm run develop`
+
