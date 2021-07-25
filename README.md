@@ -1,3 +1,5 @@
-# Strapi application
+# Fellow Directory App (Backend using Strapi)
 
-A quick description of your strapi application
+To start the app in dev mode
+
+npm run develop
